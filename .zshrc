@@ -97,7 +97,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias v=openNvim
+# alias v=openNvim
 alias guc="git reset --soft HEAD~"
 # NVM configuration
 export NVM_DIR="$HOME/.nvm"
