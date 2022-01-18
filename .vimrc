@@ -1,5 +1,4 @@
 " polyglot
-let g:polyglot_disabled = ['javascript']
 set number
 set mouse=a
 set numberwidth=1
@@ -16,11 +15,13 @@ so ~/.vim/plugins.vim
 so ~/.vim/plugin-config.vim
 so ~/.vim/maps.vim
 
+let g:gruvbox_italic=1
+let g:gruvbox_contrast_dark="hard"
 colorscheme gruvbox
-let g:gruvbox_contrast_dark = "hard"
 highlight Normal ctermbg=NONE
 set laststatus=2
 set noshowmode
+set bg=dark
 
 au BufNewFile,BufRead *.html set filetype=htmldjango
 
