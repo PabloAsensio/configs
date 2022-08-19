@@ -1,6 +1,6 @@
 cd $HOME
 
-ln -s configs/.vim .vim
-ln -s configs/.bash_aliases .bash_aliases
-ln -s configs/.vimrc .vimrc
-ln -s configs/.zshrc .zshrc
+ln -sf configs/.vim .vim
+ln -sf configs/.bash_aliases .bash_aliases
+ln -sf configs/.vimrc .vimrc
+ln -sf configs/.zshrc .zshrc

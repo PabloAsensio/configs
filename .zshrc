@@ -27,7 +27,7 @@ zstyle ':completion:*' completer _expand _complete _correct _approximate
 zstyle ':completion:*' format 'Completing %d'
 zstyle ':completion:*' group-name ''
 zstyle ':completion:*' menu select=2
-eval "$(dircolors -b)"
+eval "$(gdircolors -b)"
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 zstyle ':completion:*' list-colors ''
 zstyle ':completion:*' list-prompt %SAt %p: Hit TAB for more, or the character to insert%s
@@ -39,10 +39,14 @@ zstyle ':completion:*' verbose true
 
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
-source /home/pablo/powerlevel10k/powerlevel10k.zsh-theme
+source ${HOME}/powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
+
+# Ignore warnings
+typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
+typeset -g POWERLEVEL9K_INSTANT_PROMPT=off
 
 # Manual configuration
 
@@ -63,8 +67,8 @@ alias display='xdg-open'
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Plugins
-source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /usr/share/zsh-plugins/sudo.plugin.zsh
+source ${HOME}/configs/zsh-plugings/zsh-autosuggestions.zsh
+source ${HOME}/configs/zsh-plugings/sudo.plugin.zsh
 zstyle ':autocomplete:tab:*' insert-unambiguous yes
 zstyle ':autocomplete:tab:*' widget-style menu-select
 zstyle ':autocomplete:*' min-output 2
@@ -73,7 +77,7 @@ bindkey $key[Down] down-line-or-history
 
 
 ##### Requires "zsh-syntax-highlighting" from apt
-source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ${HOME}/configs/zsh-plugings/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Functions
 function mkt(){
