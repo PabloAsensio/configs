@@ -1,3 +1,4 @@
 [submodule "powerlevel10k"]
 	path = powerlevel10k
+	depth = 1
 	url = https://github.com/romkatv/powerlevel10k.git
