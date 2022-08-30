@@ -1,7 +1,7 @@
 cd $HOME
 
 if [[ $(echo $OSTYPE) == "linux-gnu"* ]]; then
-	sudo snap install lsd
+	sudo snap install lsd -y
     	sudo apt install bat -y
 	sudo apt install curl -y
 	sudo apt install zsh -y
