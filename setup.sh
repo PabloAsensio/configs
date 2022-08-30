@@ -2,8 +2,9 @@ cd $HOME
 
 if [[ $(echo $OSTYPE) == "linux-gnu"* ]]; then
 	sudo snap install lsd
-    	sudo apt install bat
-	sudo apt install curl
+    	sudo apt install bat -y
+	sudo apt install curl -y
+	sudo apt install zsh -y
 else
 	brew install lsd
     	brew install bat
